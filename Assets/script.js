@@ -6,6 +6,17 @@ let weight = document.getElementById('weight');
 let ID = document.getElementById('ID');
 let height = document.getElementById('height');
 let abilities = document.getElementById('abilities');
+let PokeStats = document.getElementById('PokeStats');
+let health = document.getElementById('Health');
+let speed = document.getElementById('speed');
+let attack = document.getElementById('attack');
+let defence = document.getElementById('defence');
+
+PokeStats.style.display = 'none';
+input.style.width = '300px';
+input.style.height = '30px';
+input.style.borderRadius = '10px'
+input.style.border = 'solid 2px #2c71b7'
 
 submit.addEventListener('click', () => {
   let pokemon = input.value;
@@ -30,17 +41,19 @@ submit.addEventListener('click', () => {
       let PokeHP = data.stats[0].base_stat;
       let PokeDefence = data.stats[2].base_stat;
       let PokeSpeed = data.stats[5].base_stat;
+      PokeStats.style.display = 'flex';
 
       nameCont.innerHTML = PokeName;
       image.src = PokeImage;
+      image.style.width = '200px';
       image.style.display = 'block';
-      weight.innerHTML = `Weight : ${PokeWeight}`;
-      height.innerHTML = `Height : ${PokeHeight}`;
+      weight.innerHTML = PokeWeight;
+      height.innerHTML = PokeHeight;
       ID.innerHTML = `#${PokeID}`;
-      abilities.innerHTML = `Health : ${PokeHP}<br>
-                             Speed : ${PokeSpeed}<br>
-                             Attack : ${PokeAttack}<br>
-                             Defence : ${PokeDefence}`;
+      health.innerHTML = PokeHP;
+      speed.innerHTML = PokeSpeed;
+      attack.innerHTML = PokeAttack;
+      defence.innerHTML = PokeDefence;
     }
     catch(error){
       console.error(error);
