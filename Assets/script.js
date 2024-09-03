@@ -6,13 +6,13 @@ let weight = document.getElementById('weight');
 let ID = document.getElementById('ID');
 let height = document.getElementById('height');
 let abilities = document.getElementById('abilities');
-let PokeStats = document.getElementById('PokeStats');
+let PokeCard = document.querySelector('.PokeCard');
 let health = document.getElementById('Health');
 let speed = document.getElementById('speed');
 let attack = document.getElementById('attack');
 let defence = document.getElementById('defence');
 
-PokeStats.style.display = 'none';
+PokeCard.style.display = 'none';
 input.style.width = '300px';
 input.style.height = '30px';
 input.style.borderRadius = '10px'
@@ -25,8 +25,11 @@ submit.addEventListener('click', () => {
   async function findPokemon() {
     try{
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
-      if(!response.ok || pokemon == ''){
+      if(!response.ok){
         throw new Error ("Couldn't fetch data");
+      }
+      if(pokemon == ''){
+        alert('Enter a Pokemon');
       }
 
       const data = await response.json();
@@ -41,7 +44,7 @@ submit.addEventListener('click', () => {
       let PokeHP = data.stats[0].base_stat;
       let PokeDefence = data.stats[2].base_stat;
       let PokeSpeed = data.stats[5].base_stat;
-      PokeStats.style.display = 'flex';
+      PokeCard.style.display = 'block';
 
       nameCont.innerHTML = PokeName;
       image.src = PokeImage;

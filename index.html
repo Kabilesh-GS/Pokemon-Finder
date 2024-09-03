@@ -18,15 +18,16 @@
 
       <div class="mt-4 PokeCard">
         <div class="d-flex flex-column justify-content-center align-items-center PokeNameId">
-          <p id="name"></p>
+          <strong><p id="name"></p></strong>
           <p id="ID"></p>
         </div>
 
-        <img src="" alt="pokemon" id="image" style="display: none;">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <img src="" alt="pokemon" id="image" style="display: none;">
+        </div>
 
-        <div id="PokeStats">
-          <table class="table" id="PokeStatsTable">
-            <tbody>
+        <div class="d-flex flex-column justify-content-center align-items-center"  id="PokeStats" >
+          <table id="PokeStatsTable">
               <tr>
                 <th scope="row">Height</th>
                 <td class="text-end" id="height"></td>
@@ -51,7 +52,6 @@
                 <th scope="row">Defence</th>
                 <td class="text-end" id="defence"></td>
               </tr>
-            </tbody>
           </table>
 
         </div>

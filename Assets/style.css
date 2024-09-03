@@ -19,6 +19,15 @@
   transform: scale(1.2);
 }
 .PokeCard{
-  border: 2px solid #2c71b7;
-  border-radius: 20px;
+  border: 5px solid #2c71b7;
+  border-radius: 10px;
+  width: 300px;
+  height: 410px;
+  background-color: #ffcd05d0;
+}
+#PokeStatsTable{
+  width: 200px;
+}
+#PokeStatsTable tr{
+  margin: 50px;
 }
