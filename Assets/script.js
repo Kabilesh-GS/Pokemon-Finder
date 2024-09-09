@@ -36,7 +36,7 @@ submit.addEventListener('click', () => {
       console.log(data); 
 
       let PokeWeight = data.weight;
-      let PokeName = data.name;
+      let PokeName = data.name.toUpperCase();
       let PokeImage = data.sprites.front_default;
       let PokeHeight = data.height;
       let PokeID = data.id;
