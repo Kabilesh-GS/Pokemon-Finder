@@ -3,16 +3,27 @@
   margin: 0px !important;
   font-family: "Jost", system-ui !important;
 }
+body{
+  background: linear-gradient(270deg, #ff0505, #3b5aa6, #bcbf1b, #4cd717);
+  background-size: 800% 800%;
+  animation: AnimationName 17s ease infinite;
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 .image{
   width: 300px;
 }
 #submit{
   background: none;
-  border: solid 2px #2c71b7;
+  border: solid 4px #2c71b7;
   color: black;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  font-size: 16px;
+  width: 40px;
 }
 #submit:hover{
   background: #ffcb05;
@@ -21,14 +32,19 @@
 }
 .PokeCard{
   border: 5px solid #2c71b7;
-  border-radius: 10px;
+  border-radius: 25px;
   width: 300px;
   height: 410px;
   background-color: #ffcd05d0;
+  box-shadow: 5px 5px 10px rgb(74, 74, 74);
 }
 #PokeStatsTable{
   width: 200px;
 }
 #PokeStatsTable tr{
   margin: 50px;
+}
+#input{
+  font-size: large;
+  font-weight: bold;
 }

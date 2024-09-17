@@ -15,7 +15,7 @@ let defence = document.getElementById('defence');
 PokeCard.style.display = 'none';
 input.style.width = '300px';
 input.style.height = '30px';
-input.style.borderRadius = '10px'
+input.style.borderRadius = '7px'
 input.style.border = 'solid 2px #2c71b7'
 
 submit.addEventListener('click', () => {
